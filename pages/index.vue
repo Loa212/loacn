@@ -1,6 +1,14 @@
 <template>
   <h1 class="text-2xl font-bold">Products:</h1>
   <ul class="grid gap-3 py-5 lg:grid-cols-3">
+    <li v-if="isPending" v-for="el in arr">
+      <ProductCardLoader />
+    </li>
+
+    <li v-if="error">Error</li>
+
+    <li v-if="!products || products.length <= 0">No products</li>
+
     <li v-for="product in products" :key="product.id">
       <ProductCard :product="product" />
     </li>
@@ -16,7 +24,11 @@ const fetcher = async () =>
     response.json(),
   )
 
-const { data: products, suspense } = useQuery<Product[]>({
+const {
+  data: products,
+  isPending,
+  error,
+} = useQuery<Product[]>({
   queryKey: ['products'],
   queryFn: fetcher,
   staleTime: 1000 * 60 * 5, // 5 minutes
@@ -25,7 +37,7 @@ const { data: products, suspense } = useQuery<Product[]>({
   refetchOnMount: false,
 })
 
-await suspense()
+const arr = new Array(6).fill(null)
 </script>
 
 <style scoped></style>
