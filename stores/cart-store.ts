@@ -17,7 +17,7 @@ export const useCartStore = defineStore('cart', {
       state.items.reduce((acc, item) => acc + item.quantity, 0),
     totalPrice: state =>
       state.items.reduce(
-        (acc, item) => acc + parseInt(item.price) * item.quantity,
+        (acc, item) => acc + parseFloat(item.price) * item.quantity,
         0,
       ),
   },
