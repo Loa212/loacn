@@ -129,7 +129,10 @@
             <span class="title-font text-2xl font-medium text-gray-900">
               {{ product.price }} $
             </span>
-            <Button variant="success">
+            <Button
+              variant="success"
+              @click="() => toast.success('Added to cart!')"
+            >
               Add to cart
               <ShoppingBasket class="ms-2 h-6 w-6" />
             </Button>
@@ -151,6 +154,8 @@ import type { Product } from '../../types/product'
 import { ArrowLeft, ShoppingBasket } from 'lucide-vue-next'
 import Skeleton from '~/components/skeleton.vue'
 import Button from '~/components/button.vue'
+import { toast } from 'vue-sonner'
+
 const {
   params: { id },
 } = useRoute()

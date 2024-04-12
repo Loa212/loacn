@@ -1,5 +1,6 @@
 <script setup>
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
+import { Toaster } from 'vue-sonner'
 </script>
 
 <template>
@@ -56,6 +57,7 @@ import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
     <div class="container mx-auto p-5">
       <slot />
     </div>
+    <Toaster />
     <VueQueryDevtools />
   </div>
 </template>
