@@ -1,0 +1,19 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "html": "HTML",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact",
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
