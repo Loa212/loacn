@@ -1,3 +1,7 @@
+<script setup>
+import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
+</script>
+
 <template>
   <div>
     <header class="body-font text-gray-600">
@@ -52,5 +56,6 @@
     <div class="container mx-auto p-5">
       <slot />
     </div>
+    <VueQueryDevtools />
   </div>
 </template>

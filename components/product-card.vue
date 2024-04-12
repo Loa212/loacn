@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Product } from '~/pages/types/product'
+import type { Product } from '~/types/product'
 
 const {
   product: { title, description, image, price, id, category },

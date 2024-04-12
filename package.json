@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@tanstack/vue-query": "^5.29.0",
+    "@tanstack/vue-query-devtools": "^5.29.0",
     "clsx": "^2.1.0",
     "cva": "npm:class-variance-authority",
     "lucide-vue-next": "^0.367.0",

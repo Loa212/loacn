@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import { useQuery } from '@tanstack/vue-query'
-import type { Product } from './types/product'
+import type { Product } from '../types/product'
 
 const fetcher = async () =>
   await fetch('https://fakestoreapi.com/products?limit=6').then(response =>
