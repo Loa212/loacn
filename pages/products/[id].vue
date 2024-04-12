@@ -5,8 +5,10 @@
         to="/"
         class="ms-5 flex items-center justify-normal gap-1 font-medium"
       >
-        <ArrowLeft :size="20" />
-        Back
+        <Button variant="link" as-child class="text-gray-500">
+          <ArrowLeft :size="20" class="me-1" />
+          Back
+        </Button>
       </NuxtLink>
     </div>
     <div class="container mx-auto px-5">
@@ -129,10 +131,7 @@
             <span class="title-font text-2xl font-medium text-gray-900">
               {{ product.price }} $
             </span>
-            <Button
-              variant="success"
-              @click="() => toast.success('Added to cart!')"
-            >
+            <Button variant="success" @click="addToCartHandler()">
               Add to cart
               <ShoppingBasket class="ms-2 h-6 w-6" />
             </Button>
@@ -186,6 +185,17 @@ const {
   refetchOnMount: false,
   enabled: !!id,
 })
+
+import { useCartStore, type CartItem } from '../../stores/cart-store'
+import { storeToRefs } from 'pinia'
+const store = useCartStore()
+const { addToCart } = store
+
+const addToCartHandler = () => {
+  if (!product.value) return
+  addToCart({ ...product.value, quantity: 1 })
+  toast.success('Added to cart!')
+}
 </script>
 
 <style scoped></style>
