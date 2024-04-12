@@ -60,31 +60,15 @@
               <Skeleton class="h-4 w-16 bg-gray-400" />
             </span>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center justify-between gap-4">
             <span class="title-font text-2xl font-medium text-gray-900">
               <Skeleton class="h-5 w-36 bg-gray-500" />
             </span>
-            <button
-              class="ml-auto flex rounded border-0 bg-green-500 px-6 py-2 text-white hover:bg-green-600 focus:outline-none"
-            >
-              Buy
-            </button>
-            <button
-              class="ml-4 inline-flex h-10 w-10 items-center justify-center rounded-full border-0 bg-gray-200 p-0 text-gray-500"
-            >
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="h-5 w-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
-                ></path>
-              </svg>
-            </button>
+
+            <Button variant="success" disabled>
+              Add to cart
+              <ShoppingBasket class="ms-2 h-6 w-6" />
+            </Button>
           </div>
         </div>
         <Skeleton class="h-96 w-1/2 bg-gray-200" />
@@ -141,31 +125,14 @@
             <span class="text-gray-500">Quantity</span>
             <span class="ml-auto text-gray-900">4</span>
           </div>
-          <div class="flex">
+          <div class="flex items-center justify-between gap-4">
             <span class="title-font text-2xl font-medium text-gray-900">
               {{ product.price }} $
             </span>
-            <button
-              class="ml-auto flex rounded border-0 bg-green-500 px-6 py-2 text-white hover:bg-green-600 focus:outline-none"
-            >
-              Buy
-            </button>
-            <button
-              class="ml-4 inline-flex h-10 w-10 items-center justify-center rounded-full border-0 bg-gray-200 p-0 text-gray-500"
-            >
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="h-5 w-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
-                ></path>
-              </svg>
-            </button>
+            <Button variant="success">
+              Add to cart
+              <ShoppingBasket class="ms-2 h-6 w-6" />
+            </Button>
           </div>
         </div>
         <img
@@ -181,8 +148,9 @@
 <script setup lang="ts">
 import { useQuery } from '@tanstack/vue-query'
 import type { Product } from '../../types/product'
-import { ArrowLeft } from 'lucide-vue-next'
+import { ArrowLeft, ShoppingBasket } from 'lucide-vue-next'
 import Skeleton from '~/components/skeleton.vue'
+import Button from '~/components/button.vue'
 const {
   params: { id },
 } = useRoute()
