@@ -1,8 +1,6 @@
 <script setup>
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 import { Toaster } from 'vue-sonner'
-import Button from '~/components/button.vue'
-import { ShoppingBasket } from 'lucide-vue-next'
 </script>
 
 <template>
