@@ -186,8 +186,7 @@ const {
   enabled: !!id,
 })
 
-import { useCartStore, type CartItem } from '../../stores/cart-store'
-import { storeToRefs } from 'pinia'
+import { useCartStore } from '../../stores/cart-store'
 const store = useCartStore()
 const { addToCart } = store
 

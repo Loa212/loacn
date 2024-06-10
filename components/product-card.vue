@@ -29,7 +29,7 @@
 import type { Product } from '~/types/product'
 
 const {
-  product: { title, description, image, price, id, category },
+  product: { title, image, price, id, category },
 } = withDefaults(defineProps<{ product: Product }>(), {})
 </script>
 
