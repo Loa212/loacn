@@ -131,10 +131,28 @@
             <span class="title-font text-2xl font-medium text-gray-900">
               {{ product.price }} $
             </span>
-            <Button variant="success" @click="addToCartHandler()">
-              Add to cart
-              <ShoppingBasket class="ms-2 h-6 w-6" />
-            </Button>
+            <div class="flex items-center justify-normal gap-2">
+              <Select default-value="1">
+                <SelectTrigger class="w-[180px]">
+                  <SelectValue placeholder="Quantity" />
+                </SelectTrigger>
+                <SelectContent class="min-w-2">
+                  <SelectGroup>
+                    <SelectLabel>Quantity</SelectLabel>
+                    <SelectItem value="1">1</SelectItem>
+                    <SelectItem value="2">2</SelectItem>
+                    <SelectItem value="3">3</SelectItem>
+                    <SelectItem value="4">4</SelectItem>
+                    <SelectItem value="5">5</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+
+              <Button variant="success" @click="addToCartHandler()">
+                Add to cart
+                <ShoppingBasket class="ms-2 h-6 w-6" />
+              </Button>
+            </div>
           </div>
         </div>
         <img
