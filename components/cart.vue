@@ -29,16 +29,27 @@
               >
             </div>
             <div class="col-span-3">
-              <Button @click="removeFromCart(item)" variant="ghost" size="sm">
+              <Button @click="decreaseQuantity(item)" variant="ghost" size="sm">
                 -
               </Button>
               <span>{{ item.quantity }}</span>
-              <Button @click="addToCart(item)" variant="ghost" size="sm">
+              <Button @click="increaseQuantity(item)" variant="ghost" size="sm">
                 +
               </Button>
+              <div>
+                <Button
+                  @click="removeFromCart(item)"
+                  aria-label="remove this item from the cart"
+                  variant="destructive"
+                  size="icon"
+                >
+                  <Trash2 :size="16" class="me-1" />
+                </Button>
+              </div>
             </div>
           </div>
         </li>
+
         <li>
           <div
             class="mx-8 flex items-center justify-between border-t border-gray-500 pb-2 pt-4"
@@ -65,13 +76,13 @@
 import { useCartStore } from '../stores/cart-store'
 import { storeToRefs } from 'pinia'
 import Button from './button.vue'
-import { ArrowRight, ShoppingBasket } from 'lucide-vue-next'
+import { ArrowRight, ShoppingBasket, Trash2 } from 'lucide-vue-next'
 
 import { HoverCard, HoverCardContent, HoverCardTrigger } from './hover-card'
 
 const store = useCartStore()
 const { items, totalItems, totalPrice } = storeToRefs(store)
-const { addToCart, removeFromCart } = store
+const { increaseQuantity, decreaseQuantity, removeFromCart } = store
 </script>
 
 <style scoped></style>

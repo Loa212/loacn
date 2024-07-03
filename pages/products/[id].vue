@@ -131,12 +131,15 @@
             <span class="title-font text-2xl font-medium text-gray-900">
               {{ product.price }} $
             </span>
-            <div class="flex items-center justify-normal gap-2">
-              <Select default-value="1">
-                <SelectTrigger class="w-[180px]">
+            <form
+              @submit="submitHandler"
+              class="flex items-center justify-normal gap-2"
+            >
+              <Select v-model="selectedQuantity" default-value="1">
+                <SelectTrigger class="w-[80px]">
                   <SelectValue placeholder="Quantity" />
                 </SelectTrigger>
-                <SelectContent class="min-w-2">
+                <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Quantity</SelectLabel>
                     <SelectItem value="1">1</SelectItem>
@@ -148,11 +151,11 @@
                 </SelectContent>
               </Select>
 
-              <Button variant="success" @click="addToCartHandler()">
+              <Button variant="success">
                 Add to cart
                 <ShoppingBasket class="ms-2 h-6 w-6" />
               </Button>
-            </div>
+            </form>
           </div>
         </div>
         <img
@@ -172,6 +175,8 @@ import { ArrowLeft, ShoppingBasket } from 'lucide-vue-next'
 import Skeleton from '~/components/skeleton.vue'
 import Button from '~/components/button.vue'
 import { toast } from 'vue-sonner'
+
+const selectedQuantity = ref('1')
 
 const {
   params: { id },
@@ -208,10 +213,23 @@ import { useCartStore } from '../../stores/cart-store'
 const store = useCartStore()
 const { addToCart } = store
 
-const addToCartHandler = () => {
+const addToCartHandler = (qta: string) => {
   if (!product.value) return
-  addToCart({ ...product.value, quantity: 1 })
+
+  const quantity = parseInt(qta)
+
+  if (isNaN(quantity)) {
+    toast.error('Invalid quantity')
+    return
+  }
+
+  addToCart({ ...product.value, quantity })
   toast.success('Added to cart!')
+}
+
+const submitHandler = (event: Event) => {
+  event.preventDefault()
+  addToCartHandler(selectedQuantity.value)
 }
 </script>
 

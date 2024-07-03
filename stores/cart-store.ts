@@ -26,17 +26,32 @@ export const useCartStore = defineStore('cart', {
       const item = this.items.find(item => item.id === product.id)
 
       if (item) {
-        item.quantity++
+        item.quantity += product.quantity
       } else {
-        this.items.push({ ...product, quantity: 1 })
+        this.items.push({ ...product, quantity: product.quantity })
       }
     },
+    /**
+     * Removes all items of the product from the cart
+     *
+     * @param product CartItem
+     */
     removeFromCart(product: CartItem) {
+      const index = this.items.findIndex(item => item.id === product.id)
+      this.items.splice(index, 1)
+    },
+    increaseQuantity(product: CartItem) {
+      const item = this.items.find(item => item.id === product.id)
+
+      if (item) {
+        item.quantity++
+      }
+    },
+    decreaseQuantity(product: CartItem) {
       const item = this.items.find(item => item.id === product.id)
 
       if (item) {
         item.quantity--
-
         if (item.quantity <= 0) {
           const index = this.items.findIndex(item => item.id === product.id)
           this.items.splice(index, 1)
