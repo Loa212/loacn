@@ -1,4 +1,7 @@
 <template>
+  <head>
+    <title>{{ product ? product.title : 'Loading...' }} - Ecommerce</title>
+  </head>
   <section class="body-font overflow-hidden text-gray-600">
     <div class="w-24">
       <NuxtLink
@@ -101,7 +104,7 @@
             {{ product.title }}
           </h1>
           <div class="mb-4 flex">
-            <a
+            <!-- <a
               class="flex-grow border-b-2 border-green-500 px-1 py-2 text-lg text-green-500"
               >Description</a
             >
@@ -110,11 +113,43 @@
             >
             <a class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg"
               >Details</a
-            >
+            > -->
+            <Tabs default-value="description" class="w-full">
+              <TabsList class="w-full">
+                <TabsTrigger
+                  value="description"
+                  class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg data-[state=active]:border-green-500 data-[state=active]:text-green-500"
+                  >Description</TabsTrigger
+                >
+                <TabsTrigger
+                  value="reviews"
+                  class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg data-[state=active]:border-green-500 data-[state=active]:text-green-500"
+                  >Reviews</TabsTrigger
+                >
+                <TabsTrigger
+                  value="details"
+                  class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg data-[state=active]:border-green-500 data-[state=active]:text-green-500"
+                  >Details</TabsTrigger
+                >
+              </TabsList>
+              <TabsContent class="min-h-[20vh]" value="description">
+                {{ product.description }}
+              </TabsContent>
+              <TabsContent class="min-h-[20vh]" value="reviews">
+                REVIEWS Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Odit dolorem sunt laborum deleniti blanditiis nobis esse saepe
+                cumque provident, veniam quaerat odio voluptatem non pariatur.
+                Laborum velit nihil nostrum et?
+              </TabsContent>
+              <TabsContent class="min-h-[20vh]" value="details">
+                DETAILS Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Odit dolorem sunt laborum deleniti blanditiis nobis esse saepe
+                cumque provident, veniam quaerat odio voluptatem non pariatur.
+                Laborum velit nihil nostrum et?
+              </TabsContent>
+            </Tabs>
           </div>
-          <p class="mb-4 leading-relaxed">
-            {{ product.description }}
-          </p>
+
           <div class="flex border-t border-gray-200 py-2">
             <span class="text-gray-500">Color</span>
             <span class="ml-auto text-gray-900">Blue</span>
@@ -135,7 +170,7 @@
               @submit="submitHandler"
               class="flex items-center justify-normal gap-2"
             >
-              <Select v-model="selectedQuantity" default-value="1">
+              <SelectRoot v-model="selectedQuantity" default-value="1">
                 <SelectTrigger class="w-[80px]">
                   <SelectValue placeholder="Quantity" />
                 </SelectTrigger>
@@ -149,7 +184,7 @@
                     <SelectItem value="5">5</SelectItem>
                   </SelectGroup>
                 </SelectContent>
-              </Select>
+              </SelectRoot>
 
               <Button variant="success">
                 Add to cart
@@ -175,6 +210,7 @@ import { ArrowLeft, ShoppingBasket } from 'lucide-vue-next'
 import Skeleton from '~/components/skeleton.vue'
 import Button from '~/components/button.vue'
 import { toast } from 'vue-sonner'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '~/components/tabs'
 
 const selectedQuantity = ref('1')
 

@@ -83,6 +83,13 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from './hover-card'
 const store = useCartStore()
 const { items, totalItems, totalPrice } = storeToRefs(store)
 const { increaseQuantity, decreaseQuantity, removeFromCart } = store
+
+// Listen to changes in the quantity of items in the cart - alert if changes occur
+watch(totalItems, (newTotalItems, oldTotalItems) => {
+  if (newTotalItems !== oldTotalItems) {
+    console.log('Cart updated')
+  }
+})
 </script>
 
 <style scoped></style>
