@@ -1,10 +1,19 @@
-<script setup>
+<script setup lang="ts">
 import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 import { Toaster } from 'vue-sonner'
+import { PercentIcon } from 'lucide-vue-next'
+import { useThemeStore } from '@/stores/theme-store'
+import { storeToRefs } from 'pinia'
+
+const themeStore = useThemeStore()
+
+const { current_theme } = storeToRefs(themeStore)
 </script>
 
 <template>
-  <div>
+  <div :class="`${current_theme} bg-background`">
+    {{ current_theme }}
+
     <header class="body-font text-gray-600">
       <div
         class="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row"
@@ -29,13 +38,24 @@ import { Toaster } from 'vue-sonner'
           <span class="ml-3 text-xl">LoaCN</span>
         </a>
         <nav
-          class="flex flex-wrap items-center justify-center text-base md:ml-auto"
+          class="flex flex-wrap items-center justify-center gap-3 md:ml-auto"
         >
-          <a class="mr-5 hover:text-gray-900">First Link</a>
-          <a class="mr-5 hover:text-gray-900">Second Link</a>
-          <a class="mr-5 hover:text-gray-900">Third Link</a>
-          <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+          <NuxtLink :to="`/`">
+            <Button variant="ghost" size="sm" to="/">Home</Button>
+          </NuxtLink>
+
+          <NuxtLink :to="`/about`">
+            <Button variant="ghost" size="sm" to="/">About</Button>
+          </NuxtLink>
+
+          <NuxtLink :to="`/promos`">
+            <Button class="text-red-700" variant="ghost" size="sm" to="/">
+              <PercentIcon :size="16" class="me-1" />
+              Promo
+            </Button>
+          </NuxtLink>
         </nav>
+        <ThemeSelect />
         <Cart />
       </div>
     </header>
