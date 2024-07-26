@@ -3,23 +3,20 @@ import { VueQueryDevtools } from '@tanstack/vue-query-devtools'
 import { Toaster } from 'vue-sonner'
 import { PercentIcon } from 'lucide-vue-next'
 import { useThemeStore } from '@/stores/theme-store'
-import { storeToRefs } from 'pinia'
 
-const themeStore = useThemeStore()
-
-const { current_theme } = storeToRefs(themeStore)
+const theme = useThemeStore()
 </script>
 
 <template>
-  <div :class="`${current_theme} bg-background`">
-    {{ current_theme }}
-
-    <header class="body-font text-gray-600">
+  <div
+    :class="(theme.current_theme === 'light' ? '' : 'dark') + ' bg-background'"
+  >
+    <header class="body-font text-foreground">
       <div
         class="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row"
       >
         <a
-          class="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0"
+          class="title-font text-foreground mb-4 flex items-center font-medium md:mb-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +46,7 @@ const { current_theme } = storeToRefs(themeStore)
           </NuxtLink>
 
           <NuxtLink :to="`/promos`">
-            <Button class="text-red-700" variant="ghost" size="sm" to="/">
+            <Button class="text-destructive" variant="ghost" size="sm" to="/">
               <PercentIcon :size="16" class="me-1" />
               Promo
             </Button>
@@ -61,7 +58,9 @@ const { current_theme } = storeToRefs(themeStore)
     </header>
     <div class="container mx-auto p-5">
       <slot />
+      <Testimonial />
     </div>
+    <Footer />
     <Toaster />
     <VueQueryDevtools />
   </div>

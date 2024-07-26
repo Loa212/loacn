@@ -35,7 +35,7 @@ const selectedTheme = computed({
     </SelectTrigger>
     <SelectContent>
       <SelectGroup>
-        <SelectLabel>({{ current_theme }}) Themes:</SelectLabel>
+        <SelectLabel>Themes:</SelectLabel>
         <SelectItem
           v-for="theme in themes"
           :key="theme"

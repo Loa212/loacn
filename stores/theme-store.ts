@@ -4,7 +4,9 @@ export const themes = ['light', 'dark'] as const
 export type Theme = (typeof themes)[number]
 
 export const useThemeStore = defineStore('theme-store', {
-  state: () => ({
+  state: (): {
+    theme: Theme
+  } => ({
     theme: 'light',
   }),
   getters: {
