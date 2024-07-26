@@ -2,13 +2,13 @@
   <head>
     <title>{{ product ? product.title : 'Loading...' }} - Ecommerce</title>
   </head>
-  <section class="body-font overflow-hidden text-gray-600">
+  <section class="body-font text-muted-foreground overflow-hidden">
     <div class="w-24">
       <NuxtLink
         to="/"
         class="ms-5 flex items-center justify-normal gap-1 font-medium"
       >
-        <Button variant="link" as-child class="text-gray-500">
+        <Button variant="link" as-child class="text-muted-foreground">
           <ArrowLeft :size="20" class="me-1" />
           Back
         </Button>
@@ -17,57 +17,61 @@
     <div class="container mx-auto px-5">
       <div v-if="isPending" class="mx-auto flex flex-wrap">
         <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
-          <h2 class="title-font mb-2 text-sm tracking-widest text-gray-500">
-            <Skeleton class="h-4 w-20 bg-gray-500" />
+          <h2
+            class="title-font text-muted-foreground mb-2 text-sm tracking-widest"
+          >
+            <Skeleton class="bg-muted-foreground h-4 w-20" />
           </h2>
           <h1
-            class="title-font mb-4 space-y-1 text-3xl font-medium text-gray-900"
+            class="title-font text-foreground mb-4 space-y-1 text-3xl font-medium"
           >
-            <Skeleton class="h-8 w-full bg-gray-500" />
-            <Skeleton class="h-8 w-10/12 bg-gray-500" />
+            <Skeleton class="bg-muted-foreground h-8 w-full" />
+            <Skeleton class="bg-muted-foreground h-8 w-10/12" />
           </h1>
           <div class="mb-4 flex">
             <a
-              class="flex-grow border-b-2 border-green-500 px-1 py-2 text-lg text-green-500"
+              class="border-success text-success flex-grow border-b-2 px-1 py-2 text-lg"
               >Description</a
             >
-            <a class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg"
+            <a class="border-foreground flex-grow border-b-2 px-1 py-2 text-lg"
               >Reviews</a
             >
-            <a class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg"
+            <a class="border-foreground flex-grow border-b-2 px-1 py-2 text-lg"
               >Details</a
             >
           </div>
           <p class="mb-4 space-y-1 leading-relaxed">
-            <Skeleton class="w-12/12 h-3 bg-gray-400" />
-            <Skeleton class="h-3 w-10/12 bg-gray-400" />
-            <Skeleton class="h-3 w-11/12 bg-gray-400" />
-            <Skeleton class="w-12/12 h-3 bg-gray-400" />
-            <Skeleton class="h-3 w-10/12 bg-gray-400" />
-            <Skeleton class="h-3 w-11/12 bg-gray-400" />
-            <Skeleton class="h-3 w-5/12 bg-gray-400" />
+            <Skeleton class="w-12/12 bg-muted-foreground h-3" />
+            <Skeleton class="bg-muted-foreground h-3 w-10/12" />
+            <Skeleton class="bg-muted-foreground h-3 w-11/12" />
+            <Skeleton class="w-12/12 bg-muted-foreground h-3" />
+            <Skeleton class="bg-muted-foreground h-3 w-10/12" />
+            <Skeleton class="bg-muted-foreground h-3 w-11/12" />
+            <Skeleton class="bg-muted-foreground h-3 w-5/12" />
           </p>
-          <div class="flex border-t border-gray-200 py-2">
-            <span class="text-gray-500">Color</span>
-            <span class="ml-auto text-gray-900">
-              <Skeleton class="h-4 w-16 bg-gray-400" />
+          <div class="border-muted-foreground/20 flex border-t py-2">
+            <span class="text-muted-foreground">Color</span>
+            <span class="text-foreground ml-auto">
+              <Skeleton class="bg-muted-foreground h-4 w-16" />
             </span>
           </div>
-          <div class="flex border-t border-gray-200 py-2">
-            <span class="text-gray-500">Size</span>
-            <span class="ml-auto text-gray-900">
-              <Skeleton class="h-4 w-16 bg-gray-400" />
+          <div class="border-muted-foreground/20 flex border-t py-2">
+            <span class="text-muted-foreground">Size</span>
+            <span class="text-foreground ml-auto">
+              <Skeleton class="bg-muted-foreground h-4 w-16" />
             </span>
           </div>
-          <div class="mb-6 flex border-b border-t border-gray-200 py-2">
-            <span class="text-gray-500">Quantity</span>
-            <span class="ml-auto text-gray-900">
-              <Skeleton class="h-4 w-16 bg-gray-400" />
+          <div
+            class="border-muted-foreground/20 mb-6 flex border-b border-t py-2"
+          >
+            <span class="text-muted-foreground">Quantity</span>
+            <span class="text-foreground ml-auto">
+              <Skeleton class="bg-muted-foreground h-4 w-16" />
             </span>
           </div>
           <div class="flex items-center justify-between gap-4">
-            <span class="title-font text-2xl font-medium text-gray-900">
-              <Skeleton class="h-5 w-36 bg-gray-500" />
+            <span class="title-font text-foreground text-2xl font-medium">
+              <Skeleton class="bg-muted-foreground h-5 w-36" />
             </span>
 
             <Button variant="success" disabled>
@@ -76,12 +80,12 @@
             </Button>
           </div>
         </div>
-        <Skeleton class="h-96 w-1/2 bg-gray-200" />
+        <Skeleton class="bg-muted-foreground h-96 w-1/2" />
       </div>
 
       <div v-else-if="error" class="mx-auto flex flex-wrap">
         <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
-          <h2 class="title-font text-sm tracking-widest text-gray-500">
+          <h2 class="title-font text-muted-foreground text-sm tracking-widest">
             An error occurred
           </h2>
         </div>
@@ -89,7 +93,7 @@
 
       <div v-else-if="!product" class="mx-auto flex flex-wrap">
         <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
-          <h2 class="title-font text-sm tracking-widest text-gray-500">
+          <h2 class="title-font text-muted-foreground text-sm tracking-widest">
             Product not found
           </h2>
         </div>
@@ -97,38 +101,30 @@
 
       <div v-else class="mx-auto flex flex-wrap">
         <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
-          <h2 class="title-font text-sm tracking-widest text-gray-500">
+          <h2
+            class="title-font text-muted-foreground-foreground text-sm tracking-widest"
+          >
             {{ product.category }}
           </h2>
-          <h1 class="title-font mb-4 text-3xl font-medium text-gray-900">
+          <h1 class="title-font text-foreground mb-4 text-3xl font-medium">
             {{ product.title }}
           </h1>
           <div class="mb-4 flex">
-            <!-- <a
-              class="flex-grow border-b-2 border-green-500 px-1 py-2 text-lg text-green-500"
-              >Description</a
-            >
-            <a class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg"
-              >Reviews</a
-            >
-            <a class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg"
-              >Details</a
-            > -->
             <Tabs default-value="description" class="w-full">
               <TabsList class="w-full">
                 <TabsTrigger
                   value="description"
-                  class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg data-[state=active]:border-green-500 data-[state=active]:text-green-500"
+                  class="data-[state=active]:border-success data-[state=active]:text-success border-muted-foreground/60 flex-grow border-b-2 px-1 py-2 text-lg"
                   >Description</TabsTrigger
                 >
                 <TabsTrigger
                   value="reviews"
-                  class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg data-[state=active]:border-green-500 data-[state=active]:text-green-500"
+                  class="data-[state=active]:border-success data-[state=active]:text-success border-muted-foreground/60 flex-grow border-b-2 px-1 py-2 text-lg"
                   >Reviews</TabsTrigger
                 >
                 <TabsTrigger
                   value="details"
-                  class="flex-grow border-b-2 border-gray-300 px-1 py-2 text-lg data-[state=active]:border-green-500 data-[state=active]:text-green-500"
+                  class="data-[state=active]:border-success data-[state=active]:text-success border-muted-foreground/60 flex-grow border-b-2 px-1 py-2 text-lg"
                   >Details</TabsTrigger
                 >
               </TabsList>
@@ -150,20 +146,22 @@
             </Tabs>
           </div>
 
-          <div class="flex border-t border-gray-200 py-2">
-            <span class="text-gray-500">Color</span>
-            <span class="ml-auto text-gray-900">Blue</span>
+          <div class="border-muted-foreground/20 flex border-t py-2">
+            <span class="text-muted-foreground">Color</span>
+            <span class="text-foreground ml-auto">Blue</span>
           </div>
-          <div class="flex border-t border-gray-200 py-2">
-            <span class="text-gray-500">Size</span>
-            <span class="ml-auto text-gray-900">Medium</span>
+          <div class="border-muted-foreground/20 flex border-t py-2">
+            <span class="text-muted-foreground">Size</span>
+            <span class="text-foreground ml-auto">Medium</span>
           </div>
-          <div class="mb-6 flex border-b border-t border-gray-200 py-2">
-            <span class="text-gray-500">Quantity</span>
-            <span class="ml-auto text-gray-900">4</span>
+          <div
+            class="border-muted-foreground/20 mb-6 flex border-b border-t py-2"
+          >
+            <span class="text-muted-foreground">Quantity</span>
+            <span class="text-foreground ml-auto">4</span>
           </div>
           <div class="flex items-center justify-between gap-4">
-            <span class="title-font text-2xl font-medium text-gray-900">
+            <span class="title-font text-foreground text-2xl font-medium">
               {{ product.price }} $
             </span>
             <form
