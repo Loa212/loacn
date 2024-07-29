@@ -1,13 +1,13 @@
 <template>
   <footer
-    class="body-font bg-card/60 dark:bg-background text-foreground border-muted border-t"
+    class="body-font border-t border-muted bg-card/60 text-foreground dark:bg-background"
   >
     <div
       class="container mx-auto flex flex-col flex-wrap px-5 py-24 md:flex-row md:flex-nowrap md:items-center lg:items-start"
     >
       <div class="mx-auto w-64 flex-shrink-0 text-center md:mx-0 md:text-left">
         <a
-          class="title-font text-muted-foreground flex items-center justify-center font-medium md:justify-start"
+          class="title-font flex items-center justify-center font-medium text-muted-foreground md:justify-start"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            class="bg-primary text-foreground h-10 w-10 rounded-full p-2"
+            class="h-10 w-10 rounded-full bg-primary p-2 text-foreground"
             viewBox="0 0 24 24"
           >
             <path
@@ -25,7 +25,7 @@
           </svg>
           <span class="ml-3 text-xl">Tailblocks</span>
         </a>
-        <p class="text-muted-foreground mt-2 text-sm">
+        <p class="mt-2 text-sm text-muted-foreground">
           Air plant banjo lyft occupy retro adaptogen indego
         </p>
       </div>
@@ -34,32 +34,32 @@
       >
         <div class="w-full px-4 md:w-1/2 lg:w-1/4">
           <h2
-            class="title-font text-muted-foreground mb-3 text-sm font-medium tracking-widest"
+            class="title-font mb-3 text-sm font-medium tracking-widest text-muted-foreground"
           >
             CATEGORIES
           </h2>
           <nav class="mb-10 list-none">
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >First Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Second Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Third Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Fourth Link</a
               >
             </li>
@@ -67,32 +67,32 @@
         </div>
         <div class="w-full px-4 md:w-1/2 lg:w-1/4">
           <h2
-            class="title-font text-muted-foreground mb-3 text-sm font-medium tracking-widest"
+            class="title-font mb-3 text-sm font-medium tracking-widest text-muted-foreground"
           >
             CATEGORIES
           </h2>
           <nav class="mb-10 list-none">
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >First Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Second Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Third Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Fourth Link</a
               >
             </li>
@@ -100,32 +100,32 @@
         </div>
         <div class="w-full px-4 md:w-1/2 lg:w-1/4">
           <h2
-            class="title-font text-muted-foreground mb-3 text-sm font-medium tracking-widest"
+            class="title-font mb-3 text-sm font-medium tracking-widest text-muted-foreground"
           >
             CATEGORIES
           </h2>
           <nav class="mb-10 list-none">
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >First Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Second Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Third Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Fourth Link</a
               >
             </li>
@@ -133,32 +133,32 @@
         </div>
         <div class="w-full px-4 md:w-1/2 lg:w-1/4">
           <h2
-            class="title-font text-muted-foreground mb-3 text-sm font-medium tracking-widest"
+            class="title-font mb-3 text-sm font-medium tracking-widest text-muted-foreground"
           >
             CATEGORIES
           </h2>
           <nav class="mb-10 list-none">
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >First Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Second Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Third Link</a
               >
             </li>
             <li>
               <a
-                class="text-muted-foreground/80 hover:text-muted-foreground cursor-pointer"
+                class="cursor-pointer text-muted-foreground/80 hover:text-muted-foreground"
                 >Fourth Link</a
               >
             </li>
@@ -170,12 +170,12 @@
       <div
         class="container mx-auto flex flex-col flex-wrap px-5 py-4 sm:flex-row"
       >
-        <p class="text-muted-foreground text-center text-sm sm:text-left">
+        <p class="text-center text-sm text-muted-foreground sm:text-left">
           © 2020 Tailblocks —
           <a
             href="https://twitter.com/knyttneve"
             rel="noopener noreferrer"
-            class="text-muted-foreground/80 ml-1"
+            class="ml-1 text-muted-foreground/80"
             target="_blank"
             >@knyttneve</a
           >
@@ -197,7 +197,7 @@
               ></path>
             </svg>
           </a>
-          <a class="text-muted-foreground ml-3">
+          <a class="ml-3 text-muted-foreground">
             <svg
               fill="currentColor"
               stroke-linecap="round"
@@ -211,7 +211,7 @@
               ></path>
             </svg>
           </a>
-          <a class="text-muted-foreground ml-3">
+          <a class="ml-3 text-muted-foreground">
             <svg
               fill="none"
               stroke="currentColor"
@@ -227,7 +227,7 @@
               ></path>
             </svg>
           </a>
-          <a class="text-muted-foreground ml-3">
+          <a class="ml-3 text-muted-foreground">
             <svg
               fill="currentColor"
               stroke="currentColor"

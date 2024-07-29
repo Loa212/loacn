@@ -1,10 +1,10 @@
 <template>
   <NuxtLink :to="`/products/${id}`">
     <div
-      class="bg-card ring-muted text-foreground hover:ring-muted-foreground w-full cursor-pointer rounded-lg p-4 shadow-sm ring-1 transition-transform hover:-translate-y-0.5 hover:ring-2"
+      class="w-full cursor-pointer rounded-lg bg-card p-4 text-foreground shadow-sm ring-1 ring-muted transition-transform hover:-translate-y-0.5 hover:ring-2 hover:ring-muted-foreground"
     >
       <div
-        class="ring-muted relative block h-48 overflow-hidden rounded-md bg-white ring-1"
+        class="relative block h-48 overflow-hidden rounded-md bg-white ring-1 ring-muted"
       >
         <img
           alt="ecommerce"
@@ -14,14 +14,14 @@
       </div>
       <div class="mt-4">
         <h3
-          class="title-font text-muted-foreground mb-1 text-xs tracking-widest"
+          class="title-font mb-1 text-xs tracking-widest text-muted-foreground"
         >
           {{ category }}
         </h3>
         <h2 class="title-font text-lg font-medium lg:truncate">
           {{ title }}
         </h2>
-        <p class="text-muted-foreground mt-1">{{ price }} $</p>
+        <p class="mt-1 text-muted-foreground">{{ price }} $</p>
       </div>
     </div>
   </NuxtLink>

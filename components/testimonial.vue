@@ -2,19 +2,19 @@
   <section class="body-font text-foreground">
     <div class="container mx-auto px-5 py-24">
       <h1
-        class="title-font text-foreground mb-12 text-center text-3xl font-medium"
+        class="title-font mb-12 text-center text-3xl font-medium text-foreground"
       >
         Testimonials
       </h1>
       <div class="-m-4 flex flex-wrap">
         <div class="w-full p-4 md:w-1/2">
           <div
-            class="bg-card-foreground/5 ring-muted-foreground/20 h-full rounded p-8 ring-1"
+            class="h-full rounded bg-card-foreground/5 p-8 ring-1 ring-muted-foreground/20"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              class="text-card-foreground mb-4 block h-5 w-5"
+              class="mb-4 block h-5 w-5 text-card-foreground"
               viewBox="0 0 975.036 975.036"
             >
               <path
@@ -34,10 +34,10 @@
                 class="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
               />
               <span class="flex flex-grow flex-col pl-4">
-                <span class="title-font text-foreground font-medium"
+                <span class="title-font font-medium text-foreground"
                   >Holden Caulfield</span
                 >
-                <span class="text-muted-foreground/60 text-sm"
+                <span class="text-sm text-muted-foreground/60"
                   >UI DEVELOPER</span
                 >
               </span>
@@ -46,12 +46,12 @@
         </div>
         <div class="w-full p-4 md:w-1/2">
           <div
-            class="bg-card-foreground/5 ring-muted-foreground/20 h-full rounded p-8 ring-1"
+            class="h-full rounded bg-card-foreground/5 p-8 ring-1 ring-muted-foreground/20"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
-              class="text-card-foreground mb-4 block h-5 w-5"
+              class="mb-4 block h-5 w-5 text-card-foreground"
               viewBox="0 0 975.036 975.036"
             >
               <path
@@ -71,10 +71,10 @@
                 class="h-12 w-12 flex-shrink-0 rounded-full object-cover object-center"
               />
               <span class="flex flex-grow flex-col pl-4">
-                <span class="title-font text-foreground font-medium"
+                <span class="title-font font-medium text-foreground"
                   >Alper Kamu</span
                 >
-                <span class="text-muted-foreground/60 text-sm">DESIGNER</span>
+                <span class="text-sm text-muted-foreground/60">DESIGNER</span>
               </span>
             </a>
           </div>

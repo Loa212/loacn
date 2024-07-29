@@ -2,7 +2,7 @@
   <head>
     <title>{{ product ? product.title : 'Loading...' }} - Ecommerce</title>
   </head>
-  <section class="body-font text-muted-foreground overflow-hidden">
+  <section class="body-font overflow-hidden text-muted-foreground">
     <div class="w-24">
       <NuxtLink
         to="/"
@@ -18,60 +18,60 @@
       <div v-if="isPending" class="mx-auto flex flex-wrap">
         <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
           <h2
-            class="title-font text-muted-foreground mb-2 text-sm tracking-widest"
+            class="title-font mb-2 text-sm tracking-widest text-muted-foreground"
           >
-            <Skeleton class="bg-muted-foreground h-4 w-20" />
+            <Skeleton class="h-4 w-20 bg-muted-foreground" />
           </h2>
           <h1
-            class="title-font text-foreground mb-4 space-y-1 text-3xl font-medium"
+            class="title-font mb-4 space-y-1 text-3xl font-medium text-foreground"
           >
-            <Skeleton class="bg-muted-foreground h-8 w-full" />
-            <Skeleton class="bg-muted-foreground h-8 w-10/12" />
+            <Skeleton class="h-8 w-full bg-muted-foreground" />
+            <Skeleton class="h-8 w-10/12 bg-muted-foreground" />
           </h1>
           <div class="mb-4 flex">
             <a
-              class="border-success text-success flex-grow border-b-2 px-1 py-2 text-lg"
+              class="flex-grow border-b-2 border-success px-1 py-2 text-lg text-success"
               >Description</a
             >
-            <a class="border-foreground flex-grow border-b-2 px-1 py-2 text-lg"
+            <a class="flex-grow border-b-2 border-foreground px-1 py-2 text-lg"
               >Reviews</a
             >
-            <a class="border-foreground flex-grow border-b-2 px-1 py-2 text-lg"
+            <a class="flex-grow border-b-2 border-foreground px-1 py-2 text-lg"
               >Details</a
             >
           </div>
           <p class="mb-4 space-y-1 leading-relaxed">
-            <Skeleton class="w-12/12 bg-muted-foreground h-3" />
-            <Skeleton class="bg-muted-foreground h-3 w-10/12" />
-            <Skeleton class="bg-muted-foreground h-3 w-11/12" />
-            <Skeleton class="w-12/12 bg-muted-foreground h-3" />
-            <Skeleton class="bg-muted-foreground h-3 w-10/12" />
-            <Skeleton class="bg-muted-foreground h-3 w-11/12" />
-            <Skeleton class="bg-muted-foreground h-3 w-5/12" />
+            <Skeleton class="w-12/12 h-3 bg-muted-foreground" />
+            <Skeleton class="h-3 w-10/12 bg-muted-foreground" />
+            <Skeleton class="h-3 w-11/12 bg-muted-foreground" />
+            <Skeleton class="w-12/12 h-3 bg-muted-foreground" />
+            <Skeleton class="h-3 w-10/12 bg-muted-foreground" />
+            <Skeleton class="h-3 w-11/12 bg-muted-foreground" />
+            <Skeleton class="h-3 w-5/12 bg-muted-foreground" />
           </p>
-          <div class="border-muted-foreground/20 flex border-t py-2">
+          <div class="flex border-t border-muted-foreground/20 py-2">
             <span class="text-muted-foreground">Color</span>
-            <span class="text-foreground ml-auto">
-              <Skeleton class="bg-muted-foreground h-4 w-16" />
+            <span class="ml-auto text-foreground">
+              <Skeleton class="h-4 w-16 bg-muted-foreground" />
             </span>
           </div>
-          <div class="border-muted-foreground/20 flex border-t py-2">
+          <div class="flex border-t border-muted-foreground/20 py-2">
             <span class="text-muted-foreground">Size</span>
-            <span class="text-foreground ml-auto">
-              <Skeleton class="bg-muted-foreground h-4 w-16" />
+            <span class="ml-auto text-foreground">
+              <Skeleton class="h-4 w-16 bg-muted-foreground" />
             </span>
           </div>
           <div
-            class="border-muted-foreground/20 mb-6 flex border-b border-t py-2"
+            class="mb-6 flex border-b border-t border-muted-foreground/20 py-2"
           >
             <span class="text-muted-foreground">Quantity</span>
-            <span class="text-foreground ml-auto">
-              <Skeleton class="bg-muted-foreground h-4 w-16" />
+            <span class="ml-auto text-foreground">
+              <Skeleton class="h-4 w-16 bg-muted-foreground" />
             </span>
           </div>
           <div class="flex items-center justify-between gap-4">
-            <span class="title-font text-foreground text-2xl font-medium">
-              <Skeleton class="bg-muted-foreground h-5 w-36" />
+            <span class="title-font text-2xl font-medium text-foreground">
+              <Skeleton class="h-5 w-36 bg-muted-foreground" />
             </span>
 
             <Button variant="success" disabled>
@@ -80,12 +80,12 @@
             </Button>
           </div>
         </div>
-        <Skeleton class="bg-muted-foreground h-96 w-1/2" />
+        <Skeleton class="h-96 w-1/2 bg-muted-foreground" />
       </div>
 
       <div v-else-if="error" class="mx-auto flex flex-wrap">
         <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
-          <h2 class="title-font text-muted-foreground text-sm tracking-widest">
+          <h2 class="title-font text-sm tracking-widest text-muted-foreground">
             An error occurred
           </h2>
         </div>
@@ -93,7 +93,7 @@
 
       <div v-else-if="!product" class="mx-auto flex flex-wrap">
         <div class="mb-6 w-full lg:mb-0 lg:w-1/2 lg:py-6 lg:pr-10">
-          <h2 class="title-font text-muted-foreground text-sm tracking-widest">
+          <h2 class="title-font text-sm tracking-widest text-muted-foreground">
             Product not found
           </h2>
         </div>
@@ -106,7 +106,7 @@
           >
             {{ product.category }}
           </h2>
-          <h1 class="title-font text-foreground mb-4 text-3xl font-medium">
+          <h1 class="title-font mb-4 text-3xl font-medium text-foreground">
             {{ product.title }}
           </h1>
           <div class="mb-4 flex">
@@ -114,17 +114,17 @@
               <TabsList class="w-full">
                 <TabsTrigger
                   value="description"
-                  class="data-[state=active]:border-success data-[state=active]:text-success border-muted-foreground/60 flex-grow border-b-2 px-1 py-2 text-lg"
+                  class="flex-grow border-b-2 border-muted-foreground/60 px-1 py-2 text-lg data-[state=active]:border-success data-[state=active]:text-success"
                   >Description</TabsTrigger
                 >
                 <TabsTrigger
                   value="reviews"
-                  class="data-[state=active]:border-success data-[state=active]:text-success border-muted-foreground/60 flex-grow border-b-2 px-1 py-2 text-lg"
+                  class="flex-grow border-b-2 border-muted-foreground/60 px-1 py-2 text-lg data-[state=active]:border-success data-[state=active]:text-success"
                   >Reviews</TabsTrigger
                 >
                 <TabsTrigger
                   value="details"
-                  class="data-[state=active]:border-success data-[state=active]:text-success border-muted-foreground/60 flex-grow border-b-2 px-1 py-2 text-lg"
+                  class="flex-grow border-b-2 border-muted-foreground/60 px-1 py-2 text-lg data-[state=active]:border-success data-[state=active]:text-success"
                   >Details</TabsTrigger
                 >
               </TabsList>
@@ -146,22 +146,22 @@
             </Tabs>
           </div>
 
-          <div class="border-muted-foreground/20 flex border-t py-2">
+          <div class="flex border-t border-muted-foreground/20 py-2">
             <span class="text-muted-foreground">Color</span>
-            <span class="text-foreground ml-auto">Blue</span>
+            <span class="ml-auto text-foreground">Blue</span>
           </div>
-          <div class="border-muted-foreground/20 flex border-t py-2">
+          <div class="flex border-t border-muted-foreground/20 py-2">
             <span class="text-muted-foreground">Size</span>
-            <span class="text-foreground ml-auto">Medium</span>
+            <span class="ml-auto text-foreground">Medium</span>
           </div>
           <div
-            class="border-muted-foreground/20 mb-6 flex border-b border-t py-2"
+            class="mb-6 flex border-b border-t border-muted-foreground/20 py-2"
           >
             <span class="text-muted-foreground">Quantity</span>
-            <span class="text-foreground ml-auto">4</span>
+            <span class="ml-auto text-foreground">4</span>
           </div>
           <div class="flex items-center justify-between gap-4">
-            <span class="title-font text-foreground text-2xl font-medium">
+            <span class="title-font text-2xl font-medium text-foreground">
               {{ product.price }} $
             </span>
             <form

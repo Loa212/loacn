@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-foreground text-2xl font-bold">Products:</h1>
+  <h1 class="text-2xl font-bold text-foreground">Products:</h1>
   <ul class="grid gap-3 py-5 lg:grid-cols-3">
     <li v-if="isPending" v-for="el in arr">
       <ProductCardLoader />

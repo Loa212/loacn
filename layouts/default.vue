@@ -16,7 +16,7 @@ const theme = useThemeStore()
         class="container mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row"
       >
         <a
-          class="title-font text-foreground mb-4 flex items-center font-medium md:mb-0"
+          class="title-font mb-4 flex items-center font-medium text-foreground md:mb-0"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
