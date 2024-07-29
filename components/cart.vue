@@ -28,12 +28,20 @@
                 {{ parseFloat(item.price) * item.quantity }}</small
               >
             </div>
-            <div class="col-span-3">
-              <Button @click="decreaseQuantity(item)" variant="ghost" size="sm">
+            <div class="dark col-span-3">
+              <Button
+                @click="decreaseQuantity(item)"
+                variant="outline"
+                size="sm"
+              >
                 -
               </Button>
-              <span>{{ item.quantity }}</span>
-              <Button @click="increaseQuantity(item)" variant="ghost" size="sm">
+              <span class="mx-1">{{ item.quantity }}</span>
+              <Button
+                @click="increaseQuantity(item)"
+                variant="outline"
+                size="sm"
+              >
                 +
               </Button>
               <div>
